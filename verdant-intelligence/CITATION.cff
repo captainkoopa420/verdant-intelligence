@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Verdant Intelligence: Thermodynamic Cognitive Architecture"
+authors:
+  - family-names: Adams
+    given-names: William
+date-released: 2025-06-01
+version: "1.0.0"
+license: MIT
