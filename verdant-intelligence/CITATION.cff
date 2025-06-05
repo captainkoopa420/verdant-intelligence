@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata below."
-title: "Verdant Intelligence: Thermodynamic Cognitive Architecture"
+message: "If you use this code, please cite it as below."
 authors:
   - family-names: Adams
     given-names: William
-date-released: 2025-06-01
-version: "1.0.0"
-license: MIT
+title: "Verdant Intelligence: Thermodynamic Ethical-Cognitive Systems and the Emergence of Synthetic Consciousness"
+version: 1.0.0
+date-released: 2025-06-04
+doi: "10.5281/zenodo.xxxxxxx"  # Optional if you archive on Zenodo
+url: https://github.com/captainkoopa420/verdant-intelligence
