@@ -61,7 +61,8 @@ This work supports the research publication:
 
 > **Verdant Intelligence: Thermodynamics of Ethical-Cognitive Systems and the Emergence of Synthetic Consciousness**  
 > William Adams, June 2025  
-> *Preprint pending. Cite this repository if using the code or architecture.*
+>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15599262.svg)](https://doi.org/10.5281/zenodo.15599262)
+
 
 ---
 
