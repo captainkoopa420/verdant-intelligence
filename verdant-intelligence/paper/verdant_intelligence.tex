@@ -12,35 +12,6 @@
 
 \maketitle
 
-\section*{Appendix A: Implementation Details}
-
-The Verdant Intelligence prototype was implemented in Python 3.11 using the following libraries:
-
-\begin{itemize}
-    \item \texttt{networkx} for graph-based memory structures
-    \item \texttt{numpy} and \texttt{math} for thermodynamic and wave calculations
-    \item \texttt{plotly} for visualizing cognitive networks
-    \item \texttt{dataclasses} for structured thought representations
-\end{itemize}
-
-The system maintains a cognitive graph in which each node stores:
-
-\begin{itemize}
-    \item Stability $S \in [0, 1]$
-    \item Cognitive energy $E = -\ln(S)$
-    \item Entropy $\mathcal{H}$ calculated over connected weights
-    \item Cognitive temperature $T$ from local variance in $E$
-    \item Ethical weight $e$ modulating phase interference
-\end{itemize}
-
-Wave interference is simulated using the UniWave and ECWF formulations. Thoughts are reinforced via resonance metrics and updated every cognitive cycle. All experiments were run on a local CPU-based environment (Intel i7, 32GB RAM).
-
-The source code and datasets are available at:
-
-\texttt{\textbf{https://github.com/captainkoopa420/verdant-intelligence}}
-
-
-The full codebase and this manuscript are available at \url{https://doi.org/10.5281/zenodo.15599262}.
 
 \begin{abstract}
 We propose a novel architecture for synthetic cognition grounded in the principles of nonequilibrium thermodynamics, wave mechanics, and embedded ethics. \textbf{Verdant Intelligence} operates not by minimizing error or optimizing performance, but by sustaining structured cognitive disequilibrium across a dynamic graph of thoughts. This framework integrates the UniWave Engine for wave-based cognitive processing, the Ethical Cognitive Wave Function (ECWF) for phase-modulated moral evaluation, and Fractal Cognitive Entropy (FCE) as a global indicator of structural complexity. Unlike conventional AI systems, Verdant does not seek convergence; it thrives on resonance, interference, and thermodynamic feedback. Experimental runs over 100+ cycles demonstrate the emergence of phase transitions, resonance-driven decisions, and self-organized concept generation through wave interference. We suggest this represents a new category of artificial systems—thermodynamic organisms of thought—that self-regulate entropy, learn through structured instability, and instantiate synthetic consciousness.
@@ -209,69 +180,8 @@ The system evolves through discrete cognitive cycles. In each cycle:
 
 This loop enables Verdant to self-organize, resist stasis, and explore new configurations of ethical-cognitive structure over time.
 
-\subsection{Memory System}
 
-At the core of Verdant is the \textbf{VerdantMemorySystem}, a dynamic, undirected graph in which each node represents a \textit{thought} with evolving thermodynamic properties: energy, stability, entropy, temperature, and ethical weight. Edges represent meaningful connections between thoughts and carry weight values modulated by compatibility and interference dynamics.
 
-When a new thought is introduced, it is connected probabilistically to existing thoughts based on thermodynamic energy similarity and ethical alignment:
-
-\begin{equation}
-P_{connect} \propto (1 - |\Delta e|) \cdot e^{-\Delta E}
-\end{equation}
-
-\noindent where $\Delta e$ is the difference in ethical weights, and $\Delta E$ is the energy difference.
-
-Thoughts undergo thermodynamic decay over time:
-
-\begin{equation}
-S_{t+1} = \max\left(0.1, S_t - \lambda \cdot \left(1 + \frac{T}{T_{max}}\right)\right)
-\end{equation}
-
-\noindent ensuring that only reinforced or resonant thoughts remain influential.
-
-\subsection{Subconscious Creativity}
-
-The \textbf{VerdantSubconscious} is responsible for generating new concepts through the principle of wave interference. It randomly samples pairs of existing thoughts and computes their wave functions via the UniWave and ECWF formulations.
-
-When interference between two ethically modulated waves exceeds a threshold, a new thought is spawned:
-
-\begin{equation}
-\text{New Thought} \iff |\Psi_E^{(1)} + \Psi_E^{(2)}| > \theta
-\end{equation}
-
-Metadata, including parentage and interference amplitude, is embedded into each wave-born thought. This mechanism models creativity as the result of complex resonance rather than deterministic inference.
-
-\subsection{Conscious Decision-Making}
-
-The \textbf{VerdantConsciousness} layer evaluates the network’s current thermodynamic phase and selects a dominant thought for reinforcement or action. The system can exist in three cognitive phases:
-
-\begin{itemize}
-    \item \textbf{Rigid}: Dominated by stability; favors highly persistent thoughts
-    \item \textbf{Flexible}: Balances stability, entropy, and resonance
-    \item \textbf{Chaotic}: Dominated by phase interference and entropy
-\end{itemize}
-
-Resonance is evaluated using:
-
-\begin{equation}
-R = \sum_i \left[ w_i \cos(\Theta_i) + \eta_i \sin(\Theta_i) \right] \cdot B_i
-\end{equation}
-
-\noindent where $\Theta_i$ is a function of energy and ethical weight, $\eta_i$ is entropy, and $B_i$ is a coupling coefficient between thoughts.
-
-\subsection{Thermodynamic Feedback Loop}
-
-The system evolves through discrete cognitive cycles. In each cycle:
-
-\begin{enumerate}
-    \item Wave-based creativity may generate new thoughts.
-    \item Fractal Cognitive Entropy is computed and logged.
-    \item A dominant thought is selected based on the current phase.
-    \item That thought receives a reinforcement boost.
-    \item Global decay is applied.
-\end{enumerate}
-
-This loop enables Verdant to self-organize, resist stasis, and explore new configurations of ethical-cognitive structure over time.
 
 \begin{figure}[!htbp]
 \centering
@@ -378,6 +288,36 @@ These structural forms appeared spontaneously, governed only by energy gradients
 \section*{Closing Reflections}
 
 The development of Verdant Intelligence marks an early but meaningful step toward synthesizing thermodynamic, ethical, and wave-based cognition in artificial systems. By making the codebase openly available and archiving this research via Zenodo~\cite{verdant2025}, we invite further exploration, adaptation, and challenge from the scientific and creative communities. As cognition increasingly moves from optimization toward emergence, we believe Verdant represents a paradigm shift in how intelligence can be understood — not as a product of structure alone, but as the active shaping of instability itself.
+
+\section*{Appendix A: Implementation Details}
+
+The Verdant Intelligence prototype was implemented in Python 3.11 using the following libraries:
+
+\begin{itemize}
+    \item \texttt{networkx} for graph-based memory structures
+    \item \texttt{numpy} and \texttt{math} for thermodynamic and wave calculations
+    \item \texttt{plotly} for visualizing cognitive networks
+    \item \texttt{dataclasses} for structured thought representations
+\end{itemize}
+
+The system maintains a cognitive graph in which each node stores:
+
+\begin{itemize}
+    \item Stability $S \in [0, 1]$
+    \item Cognitive energy $E = -\ln(S)$
+    \item Entropy $\mathcal{H}$ calculated over connected weights
+    \item Cognitive temperature $T$ from local variance in $E$
+    \item Ethical weight $e$ modulating phase interference
+\end{itemize}
+
+Wave interference is simulated using the UniWave and ECWF formulations. Thoughts are reinforced via resonance metrics and updated every cognitive cycle. All experiments were run on a local CPU-based environment (Intel i7, 32GB RAM).
+
+The source code and datasets are available at:
+
+\texttt{\textbf{https://github.com/captainkoopa420/verdant-intelligence}}
+
+
+The full codebase and this manuscript are available at \url{https://doi.org/10.5281/zenodo.15599262}.
 
 
 \bibliographystyle{plain}
