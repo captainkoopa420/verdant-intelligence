@@ -257,11 +257,22 @@ class VerdantMind:
             color.append(t.temperature)
             size.append(10 + t.stability * 20)
         node_trace = go.Scatter(
-            x=node_x, y=node_y, mode='markers', text=text, hoverinfo='text',
-            marker=dict(size=size, color=color, colorscale='Plasma',
-                        colorbar=dict(thickness=15, title='Cognitive Temperature',
-                                      xanchor='left', titleside='right'),
-                        line=dict(width=2, color='white'))
+            x=node_x,
+            y=node_y,
+            mode="markers",
+            text=text,
+            hoverinfo="text",
+            marker=dict(
+                size=size,
+                color=color,
+                colorscale="Plasma",
+                colorbar=dict(
+                    thickness=15,
+                    title=dict(text="Cognitive Temperature", side="right"),
+                    xanchor="left",
+                ),
+                line=dict(width=2, color="white"),
+            ),
         )
         fig = go.Figure(data=[edge_trace, node_trace], layout=go.Layout(
             title='Verdant Intelligence: Thermodynamic Thought Network',
